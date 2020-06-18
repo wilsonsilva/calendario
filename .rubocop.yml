@@ -1,0 +1,27 @@
+require: rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
+
+# ----------------------- Layout ----------------------
+
+Layout:
+  Max: 120
+
+# ---------------------- Metrics ----------------------
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - calendario.gemspec
+
+# ----------------------- RSpec -----------------------
+
+RSpec/ExampleLength:
+  Enabled: false
+
+# ----------------------- Style -----------------------
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
