@@ -6,16 +6,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Wilson Silva"]
   spec.email         = ["me@wilsonsilva.net"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A cal-like calendar"
+  spec.description   = "A cal-like calendar"
+  spec.homepage      = "https://github.com/wilsonsilva/calendario"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/wilsonsilva/calendario"
   spec.metadata["changelog_uri"] = "https://github.com/wilsonsilva/calendario/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
