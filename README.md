@@ -1,5 +1,12 @@
 # Calendario
 
+[![Gem Version](https://badge.fury.io/rb/caendario.svg)](https://badge.fury.io/rb/caendario)
+[![Build Status](https://travis-ci.org/wilsonsilva/caendario.svg?branch=master)](https://travis-ci.org/wilsonsilva/caendario)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7afec90a09db3956b7dc/maintainability)](https://codeclimate.com/github/wilsonsilva/caendario/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7afec90a09db3956b7dc/test_coverage)](https://codeclimate.com/github/wilsonsilva/caendario/test_coverage)
+[![Security](https://hakiri.io/github/wilsonsilva/caendario/master.svg)](https://hakiri.io/github/wilsonsilva/caendario/master)
+[![Inline docs](http://inch-ci.org/github/wilsonsilva/caendario.svg?branch=master)](http://inch-ci.org/github/wilsonsilva/caendario)
+
 A cal-like calendar.
 
 ```shell script
