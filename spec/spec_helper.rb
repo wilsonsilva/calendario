@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'calendario'
+require 'memoria/rspec'
 require 'pry'
 require 'simplecov'
 require 'simplecov-console'
@@ -13,6 +13,8 @@ unless ENV['COVERAGE'] == 'false'
   end
 end
 
+require 'calendario'
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
@@ -23,4 +25,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+Memoria.configure do |config|
+  config.configure_rspec_hooks
+  config.include_rspec_matchers
+  config.snapshot_directory = 'spec/fixtures/snapshots'
 end
