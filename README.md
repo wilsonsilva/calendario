@@ -75,7 +75,7 @@ You can also customize what to display on each day. For example, this code wil d
 ```ruby
 calendar = Calendario::Calendar.new
 rendered_calendar = calendar.render_current_year do |date|
-  if date.wday == 5 ||  if date.wday == 6
+  if date.wday == 5 || date.wday == 6
     'WE'
   else
     date.day.to_s.rjust(2)
