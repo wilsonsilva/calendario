@@ -36,7 +36,7 @@ module Calendario
     # @param [Integer] year_number The primitive numeric representation of a year
     # @param [Integer] month_number The month's number from 1 to 12
     #
-    def initialize(year_number = 2020, month_number = 1)
+    def initialize(year_number, month_number)
       @year_number = year_number
       @month_number = month_number
       @days = (first_day..last_day).to_a
