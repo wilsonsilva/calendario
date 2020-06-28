@@ -18,5 +18,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Initial core functionality
 - Codebase maintenance tools
 
-[0.2.0]: https://github.com/wilsonsilva/tuga/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/wilsonsilva/tuga/compare/15adab8...v0.1.0
+[0.2.0]: https://github.com/wilsonsilva/calendario/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/wilsonsilva/calendario/compare/15adab8...v0.1.0
