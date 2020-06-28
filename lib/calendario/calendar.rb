@@ -39,7 +39,7 @@ module Calendario
     #    end
     #  end
     #
-    # @return [String]
+    # @return [RenderedYear]
     #
     def render_current_year(&block)
       year = Year.new(Date.today.year)

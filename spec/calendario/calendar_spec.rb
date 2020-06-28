@@ -5,7 +5,7 @@ RSpec.describe Calendario::Calendar do
     context 'without a block' do
       it 'renders the current year', snapshot: true do
         rendered = calendar.render_current_year
-        expect(rendered).to match_snapshot
+        expect(rendered.to_s).to match_snapshot
       end
     end
 
@@ -19,7 +19,7 @@ RSpec.describe Calendario::Calendar do
           end
         end
 
-        expect(rendered).to match_snapshot
+        expect(rendered.to_s).to match_snapshot
       end
     end
   end

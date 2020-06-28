@@ -22,6 +22,8 @@ PreCommit:
 
   TrailingWhitespace:
     enabled: true
+    exclude:
+      - '**/*.snap'
 
 #PostCheckout:
 #  ALL: # Special hook name that customizes all hooks of this type
