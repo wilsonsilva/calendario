@@ -79,5 +79,28 @@ module Calendario
     def name
       MONTH_NAMES[month_number]
     end
+
+    # The following month
+    #
+    # @api private
+    # @return [Month]
+    #
+    def succ
+      if month_number == 12
+        self.class.new(year_number + 1, 1)
+      else
+        self.class.new(year_number, month_number + 1)
+      end
+    end
+
+    # Operator to sorts months in chronological order
+    #
+    # @api private
+    # @param [Month] other
+    # @return [Integer]
+    #
+    def <=>(other)
+      (year_number <=> other.year_number).nonzero? || month_number <=> other.month_number
+    end
   end
 end
