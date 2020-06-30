@@ -65,6 +65,9 @@ Or install it yourself as:
 
 ## Usage
 
+__WARNING:__ The API is experimental until the gem reaches the version 1.0.
+
+### Rendering a year
 Rendering the current year:
 ```ruby
 calendar = Calendario::Calendar.new
@@ -83,6 +86,46 @@ rendered_calendar = calendar.render_current_year do |date|
 end
 
 puts rendered_calendar
+```
+
+### Rendering a custom time interval
+
+You can render a custom interval in any given number of columns. In the example below, we're rendering 5 months in
+2 columns and as many rows as necessary:
+
+```ruby
+interval = Calendario::Interval.new(2020, 2, 2020, 6)
+renderer = Calendario::Renderers::IntervalRenderer.new
+
+rendered_year = renderer.render(interval, columns: 2)
+puts rendered_year
+
+#       February               March
+# Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+#                    1   1  2  3  4  5  6  7
+#  2  3  4  5  6  7  8   8  9 10 11 12 13 14
+#  9 10 11 12 13 14 15  15 16 17 18 19 20 21
+# 16 17 18 19 20 21 22  22 23 24 25 26 27 28
+# 23 24 25 26 27 28 29  29 30 31
+#
+#
+#        April                  May
+# Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+#           1  2  3  4                  1  2
+#  5  6  7  8  9 10 11   3  4  5  6  7  8  9
+# 12 13 14 15 16 17 18  10 11 12 13 14 15 16
+# 19 20 21 22 23 24 25  17 18 19 20 21 22 23
+# 26 27 28 29 30        24 25 26 27 28 29 30
+#                       31
+#
+#         June
+# Su Mo Tu We Th Fr Sa
+#     1  2  3  4  5  6
+#  7  8  9 10 11 12 13
+# 14 15 16 17 18 19 20
+# 21 22 23 24 25 26 27
+# 28 29 30
+#
 ```
 
 ## Development
