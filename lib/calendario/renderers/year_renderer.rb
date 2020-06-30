@@ -1,26 +1,14 @@
 require 'calendario/rendered_year'
 require 'calendario/renderers/month_renderer'
+require 'calendario/renderers/interval_renderer'
 
 module Calendario
   module Renderers
     # Renders a year, line by line, in a table of 3 columns by 4 rows
-    class YearRenderer
-      # The space of an empty day
-      # @return [String]
-      EMPTY_DAY_SPACES = '  '.freeze
-
+    class YearRenderer < IntervalRenderer
       # Number of month columns to display
       # @return [Integer]
       NUMBER_OF_MONTH_COLUMNS = 3
-
-      # Initializes a year renderer
-      #
-      # @api private
-      # @param [MonthRenderer] month_renderer A service to render a month line by line
-      #
-      def initialize(month_renderer = MonthRenderer.new)
-        @month_renderer = month_renderer
-      end
 
       # Formats a year, line by line, in a table of 3 columns by 4 rows
       #
@@ -44,22 +32,6 @@ module Calendario
 
       private
 
-      # A service to render a month line by line
-      #
-      # @api private
-      # @return [Calendario::Renderers::MonthRenderer]
-      #
-      attr_accessor :month_renderer
-
-      # Extracts a row from a group of months
-      #
-      # @api private
-      # @return [Array<String>]
-      #
-      def take_row(month_line, months)
-        months.map { |month| month[month_line] }.join(EMPTY_DAY_SPACES)
-      end
-
       # Centers the year in the middle of the calendar
       #
       # @api private
@@ -68,16 +40,6 @@ module Calendario
       #
       def center_year_number(year)
         year.year_number.to_s.center(61)
-      end
-
-      # Renders a list of months
-      #
-      # @api private
-      # @param [Array<Month>] months The list of months to be rendered
-      # @return [Array<RenderedMonth>]
-      #
-      def render_months(months)
-        months.map { |month| month_renderer.render(month) }
       end
     end
   end
